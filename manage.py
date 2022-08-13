@@ -3,6 +3,10 @@
 import os
 import sys
 
+if os.path.exists('env.py'):
+    import env
+
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 
 def main():
     """Run administrative tasks."""
