@@ -3,11 +3,6 @@
 import os
 import sys
 
-if os.path.exists('env.py'):
-    import env
-
-app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
-
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_todo.settings')
