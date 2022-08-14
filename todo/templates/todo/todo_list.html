@@ -7,8 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>My todo list</h1>
+    <h1>My todo list:</h1>
     
+    <table>
+        {{% for item in items %}}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.done }}</td>
+            </tr>
+        {{% endfor %}}
+    </table>
 </body>
 </html>
    
