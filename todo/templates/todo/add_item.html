@@ -11,20 +11,23 @@
 <body>
     <h1>Add an item to todo:</h1>
     <form method="POST" action="add">
+        {% csrf_token %}
         <div>
             <p>
-                <label for=""></label>
-                <input type="text">
+                <label for="id_name">Name:</label>
+                <input type="text" id="id_name" name="item_name">
             </p>
         </div>
         <div>
             <p>
-                <label for=""></label>
-                <input type="checkbox" id="id-done">
+                <label for="id_done">Done:</label>
+                <input type="checkbox" id="id-done" name="done">
             </p>
         </div>
         <div>
-            <button type="submit">Add item</button>
+            <p>
+                <button type="submit">Add item</button>
+            </p>
         </div>
     </form>
 </body>
