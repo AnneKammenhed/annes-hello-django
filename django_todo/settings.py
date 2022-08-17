@@ -38,8 +38,7 @@ if development:
     ALLOWED_HOSTS = ['localhost']
 else:
     ALLOWED_HOSTS = [
-        os.environ.get('annes-djago-app.herokuapp.com')
-    ]
+        os.environ.get('HEROKU_HOSTNAME', 'annes-djago-app.herokuapp.com')]
 
 
 # Application definition
