@@ -34,10 +34,12 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-if development:
-    ALLOWED_HOSTS = ['localhost']
-else:
-    ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME', 'annes-djago-app.herokuapp.com')]
+# if development:
+ 
+ALLOWED_HOSTS = ['localhost', 'annes-djago-app.herokuapp.com']
+
+# else:
+#    ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME', 'annes-djago-app.herokuapp.com')]
 
 
 # Application definition
